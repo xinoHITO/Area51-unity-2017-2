@@ -142,7 +142,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b05cac5d7a03c47f48f850ef99995695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 0
+  velocidadCaminar: 0
+  velocidadCorrer: 0
+  canControl: 0
+  contador: 0
 --- !u!23 &432988721
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -384,7 +387,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b05cac5d7a03c47f48f850ef99995695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 5
+  velocidadCaminar: 5
+  velocidadCorrer: 10
+  canControl: 1
+  contador: 0
 --- !u!23 &2024082684
 MeshRenderer:
   m_ObjectHideFlags: 0
