@@ -12,6 +12,8 @@ public class PlayerControl : MonoBehaviour {
 	public bool canControl;
 
 	public int contador;
+
+	public int contadorRojoAzul;
 	// Use this for initialization
 	void Start () {
 //		canControl = true;
@@ -29,7 +31,7 @@ public class PlayerControl : MonoBehaviour {
 			Debug.Log ("can control esta apagado");
 		}
 
-		CambiarColor ();
+		CambiarColorRandom ();
 	}
 	
 	// Update is called once per frame
@@ -45,7 +47,7 @@ public class PlayerControl : MonoBehaviour {
 			//preguntamos si el contador es exactamente igual a 10
 			if (contador == 10) {//podemos usar comparaciones numéricas dentro de un if
 				//cambiamos de color
-				CambiarColor ();
+				CambiarColorRandom ();
 				//reseteamos el contador de vuelta a cero
 				contador = 0;
 			}
@@ -53,12 +55,27 @@ public class PlayerControl : MonoBehaviour {
 
 
 		if (Input.GetKey (KeyCode.Space)) {
-			CambiarColor ();
+			CambiarColorRandom ();
 			velocidadCaminar = 10;
+		}
+
+		if (Input.GetMouseButtonDown (1)) {
+			CambiarColorRojoAzul ();
 		}
 	}
 
-	void CambiarColor(){
+	void CambiarColorRojoAzul(){
+		//incrementamos el contador en uno
+		contadorRojoAzul = contadorRojoAzul + 1;
+		//chequeamos si es par o impar para saber que color pintarle
+		if (contadorRojoAzul % 2 == 0) {
+			GetComponent<Renderer> ().material.color = Color.red;	
+		} else {
+			GetComponent<Renderer> ().material.color = Color.blue;
+		}
+	}
+
+	void CambiarColorRandom(){
 		GetComponent<Renderer> ().material.color = Random.ColorHSV();
 	}
 
@@ -78,38 +95,54 @@ public class PlayerControl : MonoBehaviour {
 		if (Input.GetKey (KeyCode.LeftShift)) {
 			//detectamos cuando presiones la tecla W
 			if (Input.GetKey (KeyCode.W)) {
-				//movemos el personaje en el eje Y (osea hacia arriba)
-				transform.Translate (0, velocidadCorrer * Time.deltaTime, 0);	
+				if (transform.position.y < 6.2f) {
+					//movemos el personaje en el eje Y (osea hacia arriba)
+					transform.Translate (0, velocidadCorrer * Time.deltaTime, 0);	
+				}
 			}
 
 			if (Input.GetKey (KeyCode.S)) {
-				transform.Translate (0, -velocidadCorrer * Time.deltaTime, 0);	
+				if (transform.position.y > -4) {
+					transform.Translate (0, -velocidadCorrer * Time.deltaTime, 0);	
+				}
 			}
 
 			if (Input.GetKey (KeyCode.A)) {
-				transform.Translate (-velocidadCorrer * Time.deltaTime, 0, 0);	
+				if (transform.position.x > -12) {
+					transform.Translate (-velocidadCorrer * Time.deltaTime, 0, 0);	
+				}
 			}
 
 			if (Input.GetKey (KeyCode.D)) {
-				transform.Translate (velocidadCorrer * Time.deltaTime, 0, 0);	
+				if (transform.position.x < 12) {
+					transform.Translate (velocidadCorrer * Time.deltaTime, 0, 0);	
+				}
 			}
 		} else {
 			//detectamos cuando presiones la tecla W
 			if (Input.GetKey(KeyCode.W)) {
-				//movemos el personaje en el eje Y (osea hacia arriba)
-				transform.Translate (0, velocidadCaminar*Time.deltaTime, 0);	
+				if (transform.position.y < 6.2f) {
+					//movemos el personaje en el eje Y (osea hacia arriba)
+					transform.Translate (0, velocidadCorrer * Time.deltaTime, 0);	
+				}
 			}
 
 			if (Input.GetKey(KeyCode.S)) {
-				transform.Translate (0, -velocidadCaminar*Time.deltaTime, 0);	
+				if (transform.position.y > -4) {
+					transform.Translate (0, -velocidadCorrer * Time.deltaTime, 0);	
+				}
 			}
 
 			if (Input.GetKey(KeyCode.A)) {
-				transform.Translate (-velocidadCaminar*Time.deltaTime,0, 0);	
+				if (transform.position.x > -12) {
+					transform.Translate (-velocidadCorrer * Time.deltaTime, 0, 0);	
+				}
 			}
 
 			if (Input.GetKey(KeyCode.D)) {
-				transform.Translate (velocidadCaminar*Time.deltaTime,0, 0);	
+				if (transform.position.x < 12) {
+					transform.Translate (velocidadCorrer * Time.deltaTime, 0, 0);	
+				}
 			}
 		
 		}
