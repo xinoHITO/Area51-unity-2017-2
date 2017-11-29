@@ -20,9 +20,10 @@ public class Bala : MonoBehaviour {
 	//se ejecuta cuando algun objeto entra en la zona del trigger 
 	void OnTriggerEnter(Collider other){
 		//si el objeto que ha entrado al trigger tiene el nombre "Enemigo" ... lo destruimos
-		if (other.name == "Enemigo") {
+		if (other.tag == "Enemigo") {
 			Destroy (other.gameObject);
 		}
+
 		//nos auto destruimos
 		Destroy	(gameObject);
 	}
