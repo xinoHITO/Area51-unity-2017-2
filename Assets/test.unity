@@ -254,7 +254,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &522990878
 MonoBehaviour:
@@ -559,11 +559,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4406502469922248, guid: 1d7560ce8305f4b46bc8d138835f3c67, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.27
+      value: -2.77
       objectReference: {fileID: 0}
     - target: {fileID: 4406502469922248, guid: 1d7560ce8305f4b46bc8d138835f3c67, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.31
+      value: 1.82
       objectReference: {fileID: 0}
     - target: {fileID: 4406502469922248, guid: 1d7560ce8305f4b46bc8d138835f3c67, type: 2}
       propertyPath: m_LocalPosition.z
@@ -587,11 +587,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4406502469922248, guid: 1d7560ce8305f4b46bc8d138835f3c67, type: 2}
       propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4406502469922248, guid: 1d7560ce8305f4b46bc8d138835f3c67, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d7560ce8305f4b46bc8d138835f3c67, type: 2}
@@ -741,6 +737,18 @@ GameObject:
   m_PrefabParentObject: {fileID: 1842090216951578, guid: 21b7d7dd05ddb454c9115c5d039de8c7,
     type: 2}
   m_PrefabInternal: {fileID: 862396980}
+--- !u!114 &1696736551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1696736550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60ea437a3e164e959adf174b77c18cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  salud: 100
 --- !u!4 &1696736555 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4051731224377644, guid: 21b7d7dd05ddb454c9115c5d039de8c7,
@@ -848,10 +856,6 @@ Prefab:
     - target: {fileID: 4389784004482272, guid: 75c3464d976b649ed8316b82a9a4fc03, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1379460147416290, guid: 75c3464d976b649ed8316b82a9a4fc03, type: 2}
-      propertyPath: m_Name
-      value: Enemigo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75c3464d976b649ed8316b82a9a4fc03, type: 2}

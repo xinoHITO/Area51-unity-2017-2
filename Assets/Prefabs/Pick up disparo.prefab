@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4684421988697358}
   - component: {fileID: 33068765484943926}
   - component: {fileID: 23708099265513688}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 23107200258341438}
   - component: {fileID: 54491395858461476}
   - component: {fileID: 114908689084333776}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pick up disparo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
