@@ -36,6 +36,12 @@ public class PlayerControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (GetComponent<Vida>().salud <= 0) {
+			Destroy(gameObject);
+		}
+
+
 		if (canControl) {
 			//ejecutamos nuestra funcion movimiento
 			Movimiento ();				

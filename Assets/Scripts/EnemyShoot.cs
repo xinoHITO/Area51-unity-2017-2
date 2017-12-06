@@ -7,6 +7,9 @@ public class EnemyShoot : MonoBehaviour {
 	private float tiempoDisparo;
 	public GameObject balaPrefab;
 	public GameObject spawnBalas;
+
+	public GameObject[] spawns;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -17,7 +20,11 @@ public class EnemyShoot : MonoBehaviour {
 		tiempoDisparo += Time.deltaTime;
 
 		if (tiempoDisparo >= intervaloDisparo) {
-			Instantiate (balaPrefab, spawnBalas.transform.position, Quaternion.Euler(0,0,180));
+
+			for (int i = 0; i < spawns.Length; i++) {
+				Instantiate (balaPrefab, spawns[i].transform.position, spawns[i].transform.rotation);
+			}
+
 			tiempoDisparo = 0;
 		}
 	}

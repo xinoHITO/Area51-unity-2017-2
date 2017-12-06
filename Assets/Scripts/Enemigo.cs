@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemigo : MonoBehaviour {
-	public GameObject pickupBombaPrefab;
+	public GameObject[] pickups;
 	// Use this for initialization
 	void Start () {
 		
@@ -15,7 +15,8 @@ public class Enemigo : MonoBehaviour {
 			//el enemigo tiene un 30% de probabilidad de dropear un power up
 			float randomValue = Random.Range (0, 100);
 			if (randomValue < 30) {
-				Instantiate (pickupBombaPrefab, transform.position, Quaternion.identity);	
+				int randomIndex = Random.Range (0, pickups.Length);
+				Instantiate (pickups[randomIndex], transform.position, Quaternion.identity);	
 			}
 			//nos autodestruimos
 			Destroy(gameObject);

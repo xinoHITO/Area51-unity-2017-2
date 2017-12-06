@@ -11,6 +11,21 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1379460147416290}
   m_IsPrefabParent: 1
+--- !u!1 &1055999623590468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4206222205470734}
+  m_Layer: 0
+  m_Name: spawn balas
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1085810099714892
 GameObject:
   m_ObjectHideFlags: 0
@@ -20,7 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4277020551459812}
   m_Layer: 0
-  m_Name: spawn balas
+  m_Name: spawn balas (1)
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -47,6 +62,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4206222205470734
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055999623590468}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: -1.19, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4389784004482272}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!4 &4277020551459812
 Transform:
   m_ObjectHideFlags: 1
@@ -54,11 +82,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1085810099714892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.19, y: 0, z: 0}
+  m_LocalPosition: {x: 0.95, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4389784004482272}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4389784004482272
 Transform:
@@ -67,9 +95,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1379460147416290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.25, y: 1.94, z: 0}
+  m_LocalPosition: {x: 2.9100008, y: 5.7200003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 4206222205470734}
   - {fileID: 4277020551459812}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -138,8 +167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 880a684c5b4814b3dae71bcbf6a19415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupBombaPrefab: {fileID: 1533290063871576, guid: 1d7560ce8305f4b46bc8d138835f3c67,
-    type: 2}
+  pickups:
+  - {fileID: 1533290063871576, guid: 1d7560ce8305f4b46bc8d138835f3c67, type: 2}
+  - {fileID: 1630412070908654, guid: d065af884085d435bbb7d09b1598cb78, type: 2}
 --- !u!114 &114260051864482948
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -151,9 +181,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe0bbcdb0a804ddeb703ff954b5fc18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intervaloDisparo: 1
+  intervaloDisparo: 0.8
   balaPrefab: {fileID: 1107041906873366, guid: b0d2d8478c4da4263b79f784964ac854, type: 2}
-  spawnBalas: {fileID: 1085810099714892}
+  spawnBalas: {fileID: 1055999623590468}
+  spawns:
+  - {fileID: 1055999623590468}
+  - {fileID: 1085810099714892}
 --- !u!114 &114537343728297464
 MonoBehaviour:
   m_ObjectHideFlags: 1
