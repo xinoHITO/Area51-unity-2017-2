@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfbba872b84054ad0825c6f3d4fe6ae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dano: 10
+  dano: 25
   velocidad: 10
   targetTag: Enemigo
 --- !u!135 &135635223955589708

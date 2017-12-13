@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
 
+	public int salud = 100;
+
 	//int se usa para almacenar numeros enteros
 	public int velocidadCaminar;
 	//float se usa para almacenar numeros decimales
@@ -37,7 +39,7 @@ public class PlayerControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (GetComponent<Vida>().salud <= 0) {
+		if (salud <= 0) {
 			Destroy(gameObject);
 		}
 
@@ -83,6 +85,11 @@ public class PlayerControl : MonoBehaviour {
 
 	void CambiarColorRandom(){
 		GetComponent<Renderer> ().material.color = Random.ColorHSV();
+	}
+
+	public void Herir(int danio)
+	{
+		salud -= danio;
 	}
 
 	//creamos nuestra propia funcion llamada Movimiento

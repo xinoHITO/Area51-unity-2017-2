@@ -24,7 +24,16 @@ public class Bala : MonoBehaviour {
 		//si el objeto que ha entrado al trigger tiene el tag "Enemigo" ... 
 		if (other.tag == targetTag) {
 			//le reducimos su salud
-			other.GetComponent<Vida> ().salud = other.GetComponent<Vida> ().salud - dano;
+
+			var enemigo = other.GetComponent<Enemigo> ();
+			if (enemigo)
+				enemigo.Herir (dano);
+
+			var player = other.GetComponent<PlayerControl> ();
+			if (player)
+				player.Herir (dano);
+
+			//other.GetComponent<Vida> ().salud = other.GetComponent<Vida> ().salud - dano;
 		}
 
 		//nos auto destruimos

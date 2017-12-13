@@ -68,8 +68,8 @@ GameObject:
   - component: {fileID: 65100948165945418}
   - component: {fileID: 23113203636909798}
   - component: {fileID: 114887579588453978}
-  - component: {fileID: 114782451535741282}
   - component: {fileID: 114052092189322348}
+  - component: {fileID: 95520641189108308}
   m_Layer: 0
   m_Name: Enemigo 2
   m_TagString: Enemigo
@@ -214,6 +214,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &95520641189108308
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1527523855722828}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 366f1bf8c131d40fe97555ff3e52481b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114052092189322348
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -233,18 +250,6 @@ MonoBehaviour:
   - {fileID: 1427543855371826}
   - {fileID: 1404908676404244}
   - {fileID: 1518535531632624}
---- !u!114 &114782451535741282
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1527523855722828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e60ea437a3e164e959adf174b77c18cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  salud: 100
 --- !u!114 &114887579588453978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -256,6 +261,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 880a684c5b4814b3dae71bcbf6a19415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 95520641189108308}
+  salud: 100
   pickups:
   - {fileID: 1533290063871576, guid: 1d7560ce8305f4b46bc8d138835f3c67, type: 2}
   - {fileID: 1630412070908654, guid: d065af884085d435bbb7d09b1598cb78, type: 2}

@@ -53,8 +53,8 @@ GameObject:
   - component: {fileID: 65213763126184526}
   - component: {fileID: 23530832269889210}
   - component: {fileID: 114011132937989750}
-  - component: {fileID: 114537343728297464}
   - component: {fileID: 114260051864482948}
+  - component: {fileID: 95649198484305512}
   m_Layer: 0
   m_Name: Enemigo
   m_TagString: Enemigo
@@ -156,6 +156,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &95649198484305512
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1379460147416290}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e495dd24170c24cdbb6885c7783ecc5b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114011132937989750
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,6 +184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 880a684c5b4814b3dae71bcbf6a19415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 95649198484305512}
+  salud: 100
   pickups:
   - {fileID: 1533290063871576, guid: 1d7560ce8305f4b46bc8d138835f3c67, type: 2}
   - {fileID: 1630412070908654, guid: d065af884085d435bbb7d09b1598cb78, type: 2}
@@ -181,21 +200,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe0bbcdb0a804ddeb703ff954b5fc18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intervaloDisparo: 0.8
+  intervaloDisparo: 0.5
   balaPrefab: {fileID: 1107041906873366, guid: b0d2d8478c4da4263b79f784964ac854, type: 2}
   spawnBalas: {fileID: 1055999623590468}
   spawns:
   - {fileID: 1055999623590468}
   - {fileID: 1085810099714892}
---- !u!114 &114537343728297464
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1379460147416290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e60ea437a3e164e959adf174b77c18cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  salud: 100

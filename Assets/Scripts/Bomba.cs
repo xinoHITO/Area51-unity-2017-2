@@ -24,7 +24,11 @@ public class Bomba : MonoBehaviour {
 		//si el objeto que ha entrado al trigger tiene el tag "Enemigo" ... 
 		if (other.tag == "Enemigo") {
 			//le reducimos su salud
-			other.GetComponent<Vida> ().salud = other.GetComponent<Vida> ().salud - 100;
+
+			var enemigo = other.GetComponent<Enemigo> ();
+			if (enemigo)
+				enemigo.Herir (100);
+			//other.GetComponent<Vida> ().salud = other.GetComponent<Vida> ().salud - 100;
 		}
 
 
